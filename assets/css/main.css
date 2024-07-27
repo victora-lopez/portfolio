@@ -3219,3 +3219,7 @@ input, select, textarea {
 			}
 
 	}
+
+	.submit-form{
+		margin-top: 1rem;
+	}
