@@ -2042,6 +2042,8 @@ input, select, textarea {
 		border: 0;
 		display: inline-block;
 		position: relative;
+		max-width: 348;
+		max-height: 242;
 	}
 
 		.image:before {
@@ -2059,6 +2061,8 @@ input, select, textarea {
 			position: absolute;
 			top: 0;
 			width: 100%;
+			max-width: 348;
+			max-height: 242;
 		}
 
 		.image.thumb {
@@ -2101,6 +2105,8 @@ input, select, textarea {
 		.image img {
 			border-radius: 0.35em;
 			display: block;
+			max-width: 348;
+			max-height: 242;
 		}
 
 		.image.left {
@@ -2127,10 +2133,13 @@ input, select, textarea {
 			display: block;
 			margin: 0 0 2em 0;
 			width: 100%;
+			
 		}
 
 			.image.fit img {
 				width: 100%;
+				max-width: 348;
+				max-height: 242;	
 			}
 
 		.image.avatar {
