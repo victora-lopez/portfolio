@@ -1,22 +1,27 @@
-import { render } from '@testing-library/react';
 import React from 'react';
+import './Sidebar.css';
 
 function Sidebar() {
-    render(
+    return(
         <div>
-            <a href='victor-lopez.dev' className='name'><span>Victor Lopez</span></a>
-            <a href='victor-lopez.dev' className='title'><span>Software Engineer</span></a>
+
+            <div className='side-header'>
+                <h1>
+                    <a href='/' className='name'>Victor Lopez</a>
+                </h1>
+                <h2 className='title'>Software engineer</h2>
+            </div>
 
             <ul>
-                <a href='victor-lopez.dev' className='about'><span>About</span></a>
-                <a href='victor-lopez.dev' className='experience'><span>Experience</span></a>
-                <a href='victor-lopez.dev' className='projects'><span>Projects</span></a>
+                <li><a href='victor-lopez.dev' className='about'><span>About</span></a></li>
+                <li><a href='victor-lopez.dev' className='experience'><span>Experience</span></a></li>
+                <li><a href='victor-lopez.dev' className='projects'><span>Projects</span></a></li>
             </ul>
 
             <ul>
-                <a href='https://github.com/victora-lopez/' className='github'></a>
-                <a href='https://www.linkedin.com/in/victora-lopez/' className='linkedin'></a>
-                <a href='https://medium.com/@victorandreslopez314' className='medium'></a>
+                <li><a href='https://github.com/victora-lopez/' className='github'><span className='label'>Github</span></a></li>
+                <li><a href='https://www.linkedin.com/in/victora-lopez/' className='linkedin'><span className='label'>Linkedin</span></a></li>
+                <li><a href='https://medium.com/@victorandreslopez314' className='medium'><span className='label'>Medium</span></a></li>
             </ul>
         </div>
     )
