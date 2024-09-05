@@ -22,10 +22,10 @@ function Sidebar() {
                             </nav>
                         </div>
                         
-                        <div className='flex gap-4 tailwindfontsizebiggerforicons'>
-                            <a href='https://www.linkedin.com/in/victora-lopez/'><FontAwesomeIcon icon={faLinkedinIn} /></a>
-                            <a href='https://github.com/victora-lopez/'><FontAwesomeIcon icon={faGithub} /></a>
-                            <a href='https://medium.com/@victorandreslopez314'><FontAwesomeIcon icon={faMedium} /></a>
+                        <div className='flex gap-8 text-2xl'>
+                            <a target='_blank' href='https://www.linkedin.com/in/victora-lopez/'><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                            <a target='_blank' href='https://github.com/victora-lopez/'><FontAwesomeIcon icon={faGithub} /></a>
+                            <a target='_blank' href='https://medium.com/@victorandreslopez314'><FontAwesomeIcon icon={faMedium} /></a>
                         </div>
                 </header>
     )
