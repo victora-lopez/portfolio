@@ -5,7 +5,8 @@ import React from 'react';
 
 function Sidebar() {
     return(
-                <header className='lg:sticky lg:top-0 lg:flex lg:min-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 flex'>
+                <header className='flex lg:w-1/2 lg:sticky lg:top-0'>
+                    <div className='flex-grow lg:flex lg:min-h-screen lg:flex-col lg:justify-between lg:py-24'>
                         <div>
                             <h1>
                                 <a href='/' className='text-4xl font-bold tracking-tight sm:text-5xl'>Victor Lopez</a>
@@ -28,6 +29,8 @@ function Sidebar() {
                             <a target='_blank' href='https://github.com/victora-lopez/'><FontAwesomeIcon icon={faGithub} /></a>
                             <a target='_blank' href='https://medium.com/@victorandreslopez314'><FontAwesomeIcon icon={faMedium} /></a>
                         </div>
+                    </div>
+                    <img src={pfp} className='rounded-full w-32 justify-end lg:hidden sm:w-40'/>
                 </header>
     )
 }
