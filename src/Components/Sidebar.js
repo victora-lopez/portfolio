@@ -1,10 +1,11 @@
 import { faGithub, faLinkedinIn, faMedium } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import pfp from "../images/pfp.jpg";
 import React from 'react';
 
 function Sidebar() {
     return(
-                <header className='lg:sticky lg:top-0 lg:flex lg:min-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24'>
+                <header className='lg:sticky lg:top-0 lg:flex lg:min-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 flex'>
                         <div>
                             <h1>
                                 <a href='/' className='text-4xl font-bold tracking-tight sm:text-5xl'>Victor Lopez</a>
