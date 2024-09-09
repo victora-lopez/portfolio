@@ -1,5 +1,9 @@
 import React from "react";
 
+function handleClick() {
+    console.log("clicked")
+}
+
 function Experience() {
     return (
         <section id="Experience">
@@ -11,7 +15,8 @@ function Experience() {
                           type="radio"
                           name="jobs"
                           value="Texas Instruments"
-                          className="list-none"
+                          className="hidden"
+                          onClick={handleClick}
                           defaultChecked
                         />
                         Product Marketing Engineer
@@ -22,6 +27,7 @@ function Experience() {
                           type="radio"
                           name="jobs"
                           value="IEEE"
+                          className="hidden"
                         />
                         Director Of Technology
                     </label>
@@ -31,6 +37,7 @@ function Experience() {
                           type="radio"
                           name="jobs"
                           value="Independent"
+                          className="hidden"
                         />
                         Independent Developer
                     </label>
