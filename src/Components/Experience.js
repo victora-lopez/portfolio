@@ -1,49 +1,61 @@
-import React from "react";
-
-function handleClick() {
-    console.log("clicked")
-}
+import React, {useState} from "react";
+import "./Experience.css"
 
 function Experience() {
+
+    const jobs = [
+        {value: "JPMC", label: "Software Engineer"},
+        {value: "TI", label: "Product Marketing Engineer"},
+        {value: "IEEE", label: "Director of Technology"},
+    ]
+
+    const descriptions = [
+        {job: ""}
+    ]
+
+    const [selectedJob, setSelectedJob] = useState("JPMC");
+
+    const handleChange = (event) => {
+        setSelectedJob(event.target.value);
+    }
+
+
     return (
         <section id="Experience">
             <h1 className="font-bold text-lg mb-8 sm:text-2xl">Work Experience</h1>
-            <div className="flex">
-                <form className="flex flex-col gap-8 text-sm">
-                    <label>
-                        <input
-                          type="radio"
-                          name="jobs"
-                          value="Texas Instruments"
-                          className="hidden"
-                          onClick={handleClick}
-                          defaultChecked
-                        />
-                        Product Marketing Engineer
-                    </label>
-
-                    <label>
-                        <input
-                          type="radio"
-                          name="jobs"
-                          value="IEEE"
-                          className="hidden"
-                        />
-                        Director Of Technology
-                    </label>
-
-                    <label>
-                        <input
-                          type="radio"
-                          name="jobs"
-                          value="Independent"
-                          className="hidden"
-                        />
-                        Independent Developer
-                    </label>
+            <div className="flex flex-col">
+                <form className="flex gap-8 text-sm justify-between border-b border-black job-group">
+                    {jobs.map( (job) => (
+                                <label key={job.value} className={selectedJob === job.value ? "font-bold": ""}>
+                                    <input
+                                    type="radio"
+                                    name="jobs"
+                                    value={job.value}
+                                    checked={job.value === selectedJob}
+                                    onChange={handleChange}
+                                    className="hidden"
+                                    />
+                                    {job.label}
+                                </label>
+                            )
+                        )
+                    }
                 </form>
-                <div className="mx-6 w-0 border-l border-black"></div>
-                
+                <ul className="px-4 list-disc">
+                    <li>filler 1</li>
+                    <li>filler 1</li>
+                    <li>filler 1</li>
+                </ul>
+                <ul className="px-4 list-disc hidden">
+                    <li>filler 2</li>
+                    <li>filler 2</li>
+                    <li>filler 2</li>
+                </ul>
+                <ul className="px-4 list-disc hidden">
+                    <li>filler 3</li>
+                    <li>filler 3</li>
+                    <li>filler 3</li>
+                </ul>
             </div>
         </section>
     )

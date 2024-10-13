@@ -11,7 +11,7 @@ function Sidebar() {
                             <h1>
                                 <a href='/' className='text-4xl font-bold tracking-tight sm:text-5xl'>Victor Lopez</a>
                             </h1>
-                            <h2 className='mt-3 text-lg font-medium tracking-tight sm:text-xl'>Frontend Developer</h2>
+                            <h2 className='mt-3 text-lg font-medium tracking-tight sm:text-xl'>Software Engineer</h2>
                         </div>
 
                         <div>
