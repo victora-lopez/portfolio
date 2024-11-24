@@ -4,9 +4,27 @@ import "./Experience.css"
 function Experience() {
 
     const jobs = [
-        {value: "JPMC", label: "Software Engineer"},
-        {value: "TI", label: "Product Marketing Engineer"},
-        {value: "IEEE", label: "Director of Technology"},
+        {value: "JPMC", 
+         label: "Software Engineer", 
+         description: [
+            "Joining JPMorgan's Software Engineer Program to develop scalable and innovative solutions.",
+            "Advancing technical and leadership skills through mentorship and training.",
+            "Collaborating with global teams to design and deliver high-quality software."]
+        },
+        {value: "TI",
+         label: "Product Marketing Engineer",
+         description: [
+            "Redesigned Wireless Infrastructure’s webpage to make product information and specifications moreaccessible to prospective clients.",
+            "Wrote two white papers detailing bandwidth results based on 50+ transceiver configurations.",
+            "Presented product documentation to field engineers using email templates, increasing customer acquisition."]
+        },
+        {value: "IEEE",
+         label: "Director of Technology",
+          description: [
+            "Directed embedded systems projects for 200+ students, introducing them to real life applications of EE concepts.",
+            "Integrated hardware with analog-to-digital conversion and sensor data processing software for 10+ microcontroller projects using C++.",
+            "Developed logic to analyze correct/incorrect user inputs, providing visual feedback mechanisms to indicate game status and progression."]
+        },
     ]  
 
     const [selectedJob, setSelectedJob] = useState("JPMC");
@@ -37,21 +55,15 @@ function Experience() {
                         )
                     }
                 </form>
-                <ul className= {selectedJob === jobs[0].value ? "px-4 text-sm list-disc" :"px-4 text-sm list-disc hidden" }>
-                    <li>Joining JPMorgan's Software Engineer Program to develop scalable and innovative solutions.</li>
-                    <li>Advancing technical and leadership skills through mentorship and training.</li>
-                    <li>Collaborating with global teams to design and deliver high-quality software.</li>
-                </ul>
-                <ul className="px-4 text-sm list-disc hidden">
-                    <li>filler 2</li>
-                    <li>filler 2</li>
-                    <li>filler 2</li>
-                </ul>
-                <ul className="px-4 text-sm list-disc hidden">
-                    <li>filler 3</li>
-                    <li>filler 3</li>
-                    <li>filler 3</li>
-                </ul>
+                {jobs.map( (job) => (
+                                <ul key={job.value} className={selectedJob === job.value ? "px-4 text-sm list-disc": "px-4 text-sm list-disc hidden"}>
+                                    <li>{job.description[0]}</li>
+                                    <li>{job.description[1]}</li>
+                                    <li>{job.description[2]}</li>
+                                </ul>
+                            )
+                        )
+                    }
             </div>
         </section>
     )
